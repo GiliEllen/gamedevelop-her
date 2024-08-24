@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CarFactory : MonoBehaviour
 {
-    //https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-8.0
-    //https://stackoverflow.com/questions/434761/array-versus-listt-when-to-use-which
     // i chose a list for this because it is easier to manage dynamically.
     // array has fixed size, which was better for performance
     // if i had done only the first task which is "create two cars"
@@ -41,14 +39,12 @@ public class CarFactory : MonoBehaviour
     }
 
     // method to add a car to the list
-    // https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.add?view=net-8.0
     public void AddCar(Car car) {
         cars.Add(car);
         Debug.Log(car.brand + " " + car.model + " has been added.");
     }
 
     // method to remove a car from the list
-    // https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.remove?view=net-8.0
     public void RemoveCar(Car car) {
         if (cars.Contains(car)) {
             cars.Remove(car);
